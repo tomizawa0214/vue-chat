@@ -39,7 +39,7 @@ import db from "@/firebase/init";
 import firebase from "firebase";
 import moment from "moment";
 export default {
-  name: "Home"
+  name: "Home",
   components: {
     Message
   },
