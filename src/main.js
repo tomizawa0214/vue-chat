@@ -5,6 +5,8 @@ import vuetify from "./plugins/vuetify";
 import firebase from "firebase";
 import VueChatScroll from "vue-chat-scroll";
 
+Vue.config.devtools = true;
+
 Vue.use(VueChatScroll);
 
 Vue.config.productionTip = false;

@@ -47,7 +47,7 @@ export default {
       email: null,
       password: null,
       feedback: null,
-      showPassword: false
+      showPassword: false,
     };
   },
   methods: {

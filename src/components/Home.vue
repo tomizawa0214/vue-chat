@@ -1,14 +1,11 @@
 <template>
   <v-card width="800px" class="mx-auto mt-5">
     <div class="message">
-      <v-card-title>
-        <h1 class="display-1">チャット</h1>
-      </v-card-title>
       <v-card-text class="content" v-chat-scroll>
         <div v-for="message in messages" :key="message.id">
           <div class="chat" v-if="message.name != name">
             <div class="chat__profile">
-              <img src="https://plavehold.jp/50x50.png?text=Vue" />
+              <img src="https://placehold.jp/50x50.png?text=Vue" />
             </div>
             <div class="chat__main">
               <div class="chat__main--name">{{ message.name }}</div>
@@ -69,7 +66,7 @@ export default {
               id: doc.id,
               name: doc.data().name,
               content: doc.data().content,
-              timestamp: moment(doc.data(). timestamp).format("LT")
+              timestamp: moment(doc.data().timestamp).format("LT")
             });
           }
         });
@@ -106,7 +103,7 @@ export default {
   overflow: hidden;
   &__profile {
     float: left;
-    margin-left: -50px;
+    margin-right: -50px;
     width: 40px;
     img {
       width: 100%;
@@ -121,7 +118,7 @@ export default {
       color: #EDF1EE;
       margin: 0 0 0 50px;
     }
-    &--massege {
+    &--message {
       display: inline-block;
       position: relative;
       margin: 0 0 0 50px;

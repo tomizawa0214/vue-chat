@@ -1,9 +1,9 @@
 <template>
   <v-textarea
     rows="3"
-    label="メッセージ(Alt + Enter)"
+    label="メッセージ(Enter)"
     v-model="Message"
-    v-on:keydown.enter.alt.exact="addMessage"
+    v-on:keydown.enter.exact="addMessage"
     class="ma-2"
   ></v-textarea>
 </template>

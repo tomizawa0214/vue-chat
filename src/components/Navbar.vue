@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app color="primary" dark>
     <v-toolbar-title>
-      Vue Firebase Auth
+      Chat Service
     </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items>
