@@ -13,6 +13,7 @@
       </v-btn>
       <v-btn text v-if="user">
         {{ user.email }}
+        <!-- {{ users.name }} -->
       </v-btn>
       <v-btn text v-if="user" @click="logout">
         ログアウト
@@ -22,18 +23,25 @@
 </template>
 
 <script>
+// import db from "@/firebase/init";
 import firebase from "firebase";
 export default {
   name: "Navbar",
   data() {
     return {
-      user: null
+      user: null,
     };
   },
   created() {
+    // ログイン状態を監視
     firebase.auth().onAuthStateChanged(user => {
+      // ログインしている
       if (user) {
         this.user = user;
+        let user = firebase.auth().currentUser;
+        console.log(user);
+        console.log(user.email);
+      // ログインしていない
       } else {
         this.user = null;
       }
