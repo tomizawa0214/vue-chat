@@ -38,7 +38,6 @@ export default {
       // ログインしている
       if (user) {
         this.user = user;
-        let user = firebase.auth().currentUser;
         console.log(user);
         console.log(user.email);
       // ログインしていない
